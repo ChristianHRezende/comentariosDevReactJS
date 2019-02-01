@@ -1,7 +1,11 @@
 import React from 'react'
 
-const Comment = ({comentario,index}) => {
-        return <div key={index}>{comentario.comment}</div>
+const Comment = ({ comentario, index }) => {
+        let comment = 'vazio'
+        if (comentario && comentario.comment) {
+                comment = comentario.comment
+        }
+        return <div key={index}>{comment}</div>
 }
 
 export default Comment
